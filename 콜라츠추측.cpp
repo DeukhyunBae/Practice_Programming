@@ -1,0 +1,25 @@
+#include <string>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+int solution(int num) {
+    int answer = 0;
+    
+    for(answer=0;  answer<450;answer++)
+    {
+        if(num == 1)
+            break;
+        if(num%2 == 0 )
+        {
+            num=num/2;
+        }
+        else if(num%2 == 1)
+        {
+            num= num*3 +1;
+        }
+    }
+    if(answer==450)
+        return -1;
+    return answer;
+}
